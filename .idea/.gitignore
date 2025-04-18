@@ -1,0 +1,29 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# Node.js and NPM
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+# Environment variables
+.env
+.env.local
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-*
+# Video files (you might want to ignore these if they're large)
+*.mp4
+*.mov
+*.avi
+# Build artifacts
+dist/
+build/

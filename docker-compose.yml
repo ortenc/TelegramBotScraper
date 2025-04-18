@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  bot:
+    build: .
+    container_name: telegram-bot
+    depends_on:
+      - mongo
+    environment:
+      - TELEGRAM_BOT_TOKEN=8172596710:AAGPZzPJ_M4sL-vspcN140aAkbLxYdaYOIM
+      - MONGO_URI=mongodb://mongo:27017/tiktok_bot
+    volumes:
+      - .:/usr/src/app
+    restart: unless-stopped
+
+  mongo:
+    image: mongo:6
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
